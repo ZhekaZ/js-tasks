@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		function chessBoard(n) {
+
+			for(var i=0; i<n; i++) {
+				var row = '';
+
+				for(var j=0; j<n; j++) {
+					if(i%2==0) {
+						if(j%2 == 0) {
+						row+='#';
+						} else {
+							row+='*';
+						}
+					} else {
+						if(j%2 != 0) {
+						row+='#';
+						} else {
+							row+='*';
+						}
+					}
+				}
+
+				console.log(row);
+			}
+		}
+
+		chessBoard(4);
+
+	</script>
+</body>
+</html>
