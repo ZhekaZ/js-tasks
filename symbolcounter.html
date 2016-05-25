@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		"use strict";
+		function symbCounter(str, symb) {
+			var result = 0;
+
+			for(var i=0; i < str.length; i++) {
+				if(str.charAt(i) == symb) {
+					result ++
+				}
+			}
+			return result;
+		}
+
+		console.log(symbCounter('привет мир привет', 'и'));
+
+	</script>
+</body>
+</html>
