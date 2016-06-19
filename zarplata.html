@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		//1. Есть объект salaries с зарплатами. Напишите функцию, которая вернет имя сотрудника, у которого самая большая зарплата. Если объект пустой, то пусть она выводит «нет сотрудников».
+
+			// var salaries = {
+			// 	petya : '300',
+			// 	vasya : '400',
+			// 	misha : '200'
+			// };
+
+			// function sortZp() {
+			// 	var max = 0;
+
+			// 	for(var key in salaries) {
+			// 		if(salaries[key] > max) {
+			// 			max = salaries[key];
+			// 		}
+			// 	}
+
+			// 	console.log(max);
+			// }
+
+			// sortZp();
+
+
+			2. Создайте функцию multiplyNumeric, которая получает объект и умножает все численные свойства на 2. Для проверки на число используйте функцию:
+
+			var salaries = {
+				petya : '300',
+				vasya : '400',
+				misha : 'за еду'
+			};
+
+			function isNumeric(num) { 
+			    return !isNaN(parseFloat(num)) && isFinite(num); 
+			}
+
+			function multiplyNumeric(obj) {
+				for(var key in obj) {
+					if(isNumeric(obj[key])) {
+						obj[key] *= 2;
+					}
+				}
+				console.log(obj);
+			}
+
+			multiplyNumeric(salaries);
+
+	</script>
+</body>
+</html>
