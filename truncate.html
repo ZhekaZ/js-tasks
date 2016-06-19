@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		// 6. Создайте функцию truncate(str, maxlength), которая проверяет длину строки str, и если она превосходит maxlength – заменяет конец str на "...", так чтобы ее длина стала равна maxlength. Результатом функции должна быть (при необходимости) усечённая строка.
+
+		function truncate(str, maxlength) {
+
+			if(str.length > maxlength) {
+				return (str.slice(0, (str.length-3)) + '...');
+			} else {
+				return str;
+			}
+		}
+
+		console.log(truncate('privet', 3));
+
+	</script>
+</body>
+</html>

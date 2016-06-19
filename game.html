@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		//7. Написать игру «Угадай число». Логика игры следующая: программно генерируется случайное целое число от 0 до 100. Программа выводит окно prompt с сообщением ввести число.Когда игрок вводит число, программа должна вывести окно поздравления с победой (alert), если игрок угадал число, иначе должно снова появится окно с сообщением, больше загаданное число или меньше, и предложением ввести новое число. Максимальное количество попыток – 7. Если игрок не вложился за семь ходов, должно вывестись сообщение о его проигрыше.
+
+		var numb = function(min, max) {
+			var res = max - min;
+			return parseInt(min + Math.random()*res);
+		};
+
+		var chislo = numb(0, 100);
+
+		console.log(chislo);
+
+		for(var i=0; i < 7; i++) {
+
+			var question = prompt('Введите число', 0);
+
+			if(question == chislo) {
+				console.log('victory');
+				break;
+			} else if(question > chislo) {
+				console.log('ваше число меньше');
+			} else {
+				console.log('ваше число больше');
+			}
+		}
+
+	</script>	
+</body>
+</html>
