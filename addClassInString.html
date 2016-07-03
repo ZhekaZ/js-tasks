@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>objects</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		//1. функция добавляет в список класс cls, но только если его там еще нет
+
+		// var obj = {
+		// 	className: 'open menu'
+		// }
+
+		// function addClass(obj, cls) {
+		// 	var classes= obj.className.split(' ');
+
+		// 	if(!~classes.indexOf(cls)) {
+		// 		classes.push(cls);
+
+		// 		obj.className = classes.join(' ');
+		// 	}
+		// }
+
+		// addClass(obj, 'sd');
+
+		// console.log(obj);
+
+		//2. Сортировка объектов. Сортировка массива people по полю age.
+
+		// var vasya = {name: 'Vasya', age: 23};
+		// var masha = {name: 'Masha', age: 18};
+		// var vova = {name: 'Vova', age: 6};
+		// var people = [vasya, masha, vova];
+
+		// // function sorter(people, age) {
+
+		// // }
+
+		// people.sort(function (a, b) {
+		//   if (a.age > b.age) return 1;
+		//   if (a.age < b.age) return -1;
+		// });
+
+		// console.log(people);
+
+		//3. Map
+
+		var arr = ['Есть', 'жизнь', 'на', 'марсе'];
+
+		// var arrLength = [];
+
+		// for (var i=0; i<arr.length; i++) {
+		// 	arrLength[i] = arr[i].length;
+		// }
+
+		// console.log(arrLength); //4,5,2,5
+
+		var newArr = arr.map(function(str) {
+			return str.length;
+		});
+
+		console.log(newArr);
+
+
+
+	</script>
+</body>
+</html>
